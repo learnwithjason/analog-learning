@@ -1,0 +1,9 @@
+<script lang="ts">
+import { RouterOutlet, RouterLink } from '@angular/router' with { analog: 'imports' };
+</script>
+
+<template>
+<h1>MAGIC!</h1>
+<p><a routerLink="/magic/test">test</a><a routerLink="/magic/other">other</a></p>
+<router-outlet></router-outlet>
+</template>

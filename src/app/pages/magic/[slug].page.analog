@@ -1,0 +1,17 @@
+<script lang="ts">
+import { AsyncPipe } from '@angular/common';
+import { inject } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { map } from 'rxjs';
+
+defineMetadata({
+  imports: [AsyncPipe],
+})
+
+const route = inject(ActivatedRoute);
+const slug = route.paramMap.pipe(map((params) => params.get('slug')));
+</script>
+
+<template>
+<h2>Current: {{ slug | async }}</h2>
+</template>
